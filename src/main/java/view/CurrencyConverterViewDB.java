@@ -99,7 +99,7 @@ public class CurrencyConverterViewDB extends Application {
                 resultLabel.getStyleClass().add("error-message"); // Add the error style class
             } else {
                 double result = controller.convertCurrency(amount, sourceCurrency, targetCurrency);
-                resultLabel.setText(String.format("%.2f %s", result, targetCurrency.getAbbreviation()));
+                resultLabel.setText(String.format("%.6f %s", result, targetCurrency.getAbbreviation()));
 
                 // Add the success style class
                 resultLabel.getStyleClass().add("success-message");
