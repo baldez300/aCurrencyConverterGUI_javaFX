@@ -67,7 +67,7 @@ public class CurrencyDaoDB {
 
     public void persist(CurrenciesDB emp) {
         Connection conn = MariaDbConnectionDB.getInstance();
-        String sql = "INSERT INTO employee (abbreviation, name, conversion_rate) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO currencies (abbreviation, name, conversion_rate) VALUES (?, ?, ?)";
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setString(1, emp.getAbbreviation());
